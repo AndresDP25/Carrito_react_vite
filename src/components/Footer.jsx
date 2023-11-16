@@ -1,11 +1,19 @@
+import { useCart } from '../hook/useCart';
+import { useFilters } from '../hook/useFilters';
 import './Footer.css';
 
-export function Footer({ filters }) {
+export function Footer() {
+	const { filters } = useFilters();
+	const { cart } = useCart();
   return (
 	  <footer className='footer'>
 
-		{ 
+		{/* { 
 			JSON.stringify(filters, null, 2)
+		} */}
+
+{ 
+			JSON.stringify(cart, null, 2)
 		}
 
 		{/* <h4>
